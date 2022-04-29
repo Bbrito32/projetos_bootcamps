@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="b.paulinho.de.brito"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-24 05:00:34 "/>
+        <attribute name="created" value="Yi5wYXVsaW5oby5kZS5icml0bztDUFgtVkxVWllVR1k2Wkw7MjAyMi0wNC0yNDsiMDM6MDQ6MTQgIjs0MTk5"/>
+        <attribute name="edited" value="Yi5wYXVsaW5oby5kZS5icml0bztDUFgtVkxVWllVR1k2Wkw7MjAyMi0wNC0yNDsiMDU6MDA6MzQgIjsyOzQzMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1, nota2, nota3, nota4, media, idade" type="Real" array="False" size=""/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;Digite o nome do Aluno&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Qual a sua idade?&quot;" newline="True"/>
+            <input variable="idade"/>
+            <input variable="nota1"/>
+            <input variable="nota2"/>
+            <input variable="nota3"/>
+            <input variable="nota4"/>
+            <assign variable="media" expression="(nota1+nota2+nota3+nota4)/4"/>
+            <if expression="media&gt;=8">
+                <then>
+                    <output expression="&quot;Parab&#233;ns Aprovado&quot;" newline="True"/>
+                    <output expression="&quot;Nome do Aluno: &quot; &amp; nome &amp; &quot; A sua media &#233;: &quot; &amp; media &amp; &quot; Essa &#233; sua Idadade: &quot; &amp; idade" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; reprovou&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

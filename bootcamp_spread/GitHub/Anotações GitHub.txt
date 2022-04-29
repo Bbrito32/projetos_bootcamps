@@ -1,0 +1,218 @@
+
+o git: não te interface grafica, tudo por command line linha de comando.
+
+
+
+Comandos basicos Git:
+
+no cmd do windows
+
+- Listar pastas: dir
+- navegar em pasta: cd
+- para voltar diretorio: cd..
+- limpar tela: cls (limpar o terminal)
+- ir para o C: cd/
+
+O "tabe" tem a função de completar o comando
+
+- criar pasta: mkdir nome da pasta
+- criar arquivos: echo hello > hello.txt
+
+- deletar arquivo: del nome da pasta, limpa os arquivos da pasta.
+- remover direotrio com todos os arquivos: rmdir nome da pasta /s/q
+
+-----------------------------------
+
+"Sha1" é um algoritimo de incriptação.
+gera um conjunto de carctere de 40 digitos.
+
+como usar para incriptografar um arquivo?
+
+abri o gig bash here, clicando com o botão direito do mouse dentro da pasta que você quer, vai abrir o terminal do git.
+
+Digitar comando: openss1 sha1 nome do arquivo e extenção.
+
+---------------------------
+
+Trés tipo bases de objetos Git;
+
+Blobs
+Trees
+Commits
+"
+$ echo 'Nome_VDI' | git hash-object --stdin
+c186fb78daea0d8b43423f1213b6887b85c350d4" //mostra o hash de uma string ou arquivo.
+
+
+
+Blobs:os arquivos ficam dentro do objeto blob, vai ter o
+
+estrutura do blob:
+tipo do objeto: blob
+tamanho da string ou arquivo
+\0
+e conteudo do arquivo. dentro do objeto vai conter metadados.
+as blobs contem o sha1 dos arquivos.
+
+Tree:
+
+armazenam blobs e apontando par atipos de blobs difernete, tbm contem metadados.
+as arvores apontam para outras arvores.
+
+commit: vai juntar tudo, aponta para uma arvore, aponta para um autor,parente para uma mensagem.
+
+leva;
+
+tree
+parente
+autor
+mensagem timestemp
+
+tbm possuem encriptação, possuem sha1
+
+-----------------------------------------
+
+Chave ssh e token:
+
+chave ssh: é uma forma de fazer uma conexão segura entre duas mauqinas.
+
+- acessa o Git hub e estabelece uma conexão segura com nossa maquina. A chave a colocar no Git hub é a publica.
+
+Gerar chave SSH no Git Bash:
+
+comandos: 
+ssh-Keygen -t ed25519 -C bruno-brito.cnc@hotmail.com
+
+é gerado um par de chaves, uma privada e outra publica.
+
+Chave publica tem um "Pub" no final.
+
+comando entrar na pasta: cd /diretorio/diretorio
+
+listar: ls
+control L limpa o terminal
+mkdir cria uma pasta ex: mkdir pasta
+
+comando para visualizar chave: cat id_25519 (nome da chave).
+
+1 Depois de validar a chave no GitHub é necessario iniciar a chave no Git Bash.
+
+1.1 - Comando para iniciar chave no Bash: eval $(ssh-agent -s) , vai estartar o projeto para iniciar em plano de fundo
+
+1.2 entrer a chave: ssh-add chave privada ou o caminho onde esta a chave (ex: ssh-id_25519)
+
+-----------------
+
+clonar repositorio do Git hub usando o Bash: 
+
+copiar o caminho SSH no githug e no Bash digitar o comando abaixo:
+
+git clone e caminho copiado do github
+
+---------------------------------------------
+
+Tokens de acesso pessol:
+Vai gerar um token no Github e você vai salvar na mauquina para usar sempre que nessario.
+
+ ------------------------------------------------
+
+1 Iniciado os comandos no Git;
+
+*inicir repositorio no Git: git init
+*Mover arquivos: git add
+*criar commit: git commit
+
+- iniciar git no repositorio a primeira vez ele vai pedir uma configuração padrão: 
+
+git config --global user.email "bruno-brito.cnc@hotmail"
+
+git config --global user.name <usuario_vai_ser_criado>
+
+commitar:
+git add * (mover para area de staget)
+
+git commit -m "commit incial" (commita)
+
+
+
+
+
+flag para visualizar arquivos ocultos: ls -a
+
+
+
+2 iniciar versionamento:
+
+3 Criar um commit:
+
+----------------------------------------
+
+ - quando usamos um comando "git init" cria automatimente um repositorio
+
+
+estados dos arquivos:
+
+unmodified > não sofreu modificação
+modified > foi modificado
+Staget > aguardnado para fazer parte de um commit
+
+Comando para mostra estado dos arquivos: git status
+
+mover arquivo de repositorio: 
+mv arquivo.extenção ./repositoriodestino/
+
+apos commitar vai para Uncomdifield
+
+- Repositorio remoto não atualiza automaticamente quando feito alterações Git, tem que fazer algumas ações.
+
+Tudo que esta no repositorio local tem que esta commitado se não não migra para o remoto.
+
+Comando que mostra todas as configurações do Git:
+
+git config --list
+
+Comando para fazer reescrever uma configuração;
+
+git config --global --unset <nome da configuração>
+
+* quando commitar ele não vai achar a configuração, basta rodar novamente
+
+
+
+Comando "q" para sair
+
+
+----------------------------------------------
+
+repositorio remoto do Github
+
+apontar repositorio local para o remoto;
+tem que adicionar primeir a origem:
+git remote add origin <url do githib que mostra quendo cia o repositorio remoto>
+
+git remote -v > lista os repositorios remotos
+
+empurar repositorio para o remoto: "git push origin master"
+
+puchar do remoto para depois empurrar: "git pull origin master"
+
+ser o repositorio remoto conter alterções diferentes da do que tem no git local, vai dar conflito. primeiro puxa o arquivo do remoto, e o git vai tentar junta as duas versões.
+
+Conflitos no git, como resolver;
+
+
+---------------------
+
+clonar codigo pelo terminal bash
+
+git clone e ulr copiada do github
+
+ex: git clone https://github.com/TheAlgorithms/Python.git
+
+
+
+
+
+
+
+
