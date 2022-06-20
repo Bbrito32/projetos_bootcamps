@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+    *{
+       padding: 0;
+       background-color: orangered;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .div{
+        text-align: center;
+        padding: 2px;
+        border: 1px solid black;
+        width: 200px;
+        color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="div">
+            <h1>Contador</h1>
+            <p>Primeiro contador em Javascript</p>
+        <div>
+            <button name="Subtrair" onclick="decrement()">-</button>
+                <span id="currentNumber">0</span>
+            <button name="adicionar" onclick="increment()">+</button>    
+        </div>
+        </div>
+    </section>    
+    <script src="contador.js"></script>
+</body>
+</html>
